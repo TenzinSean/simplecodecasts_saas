@@ -1,7 +1,4 @@
 class Contact < ActiveRecord::Base
-    def new
-    end
-
-    def create
-    end
+    validates :name, presence: true
+    validates :email, presence: true
 end 
