@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170410183407) do
+ActiveRecord::Schema.define(version: 20170420161656) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
@@ -54,6 +54,14 @@ ActiveRecord::Schema.define(version: 20170410183407) do
     t.datetime "updated_at",                          null: false
     t.integer  "plan_id"
     t.string   "stripe_customer_token"
+    t.string   "profile_file_name"
+    t.string   "profile_content_type"
+    t.integer  "profile_file_size"
+    t.datetime "profile_updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
